@@ -9,7 +9,7 @@ const Blogs = () => {
       {isCustomCursor && <CustomCursor />}
       <StickyNav setIsCustomCursor={setIsCustomCursor} />
       <div className="cardContent">Blogs Page</div>
-      <div className="cardContent"></div>
+      <div className="cardContent">Coming Soon</div>
     </>
   );
 };
