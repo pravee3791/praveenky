@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+
+html {
+  /* scroll-snap-type: proximity;
+  scroll-snap-points-y: repeat(100vh); */
+  /* scroll-snap-type: y proximity; */
+}
+body{
+  background-color: #101010;
+  box-sizing: border-box;
+}
+a {
+  color: #f2f2f2;
+  text-decoration: none; /* no underline */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+ .main{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-direction: column;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  /* scroll-margin: 2vh; */
+ } 
+
+ .main> div:not(:first-of-type) {
+   margin: 2vh;
+  }
+  .main>div:first-child {
+    height: 69vh; /* Set the height to whatever value you want */
+}
+.main>div:not(:first-of-type){
+  height: 100vh;
+  color: whitesmoke;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: xx-large;
+}
+
+ .card{
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ }
+
+ .cardContent{
+  color: whitesmoke;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.5rem;
+  
+ }
+
+ .contactCard{
+  color: whitesmoke;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal; 
+  font-weight: normal;
+  font-size: medium;
+  margin-top: 14px;
+ }
+ 
+ .contactCard > *:not(:first-child) {
+  margin: 10px;
+}
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  z-index: 9999;
+}
+
+.nav-pill-wrapper{
+  margin-top: 2vh;
+  /* height: 2vh; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 16px;
+
+}
+.nav-pill {
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  background-color: rgba(242, 242, 242, .05);
+  border: 1px solid rgba(242, 242, 242, .1);
+  border-radius: 24px;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  height: 48px;
+  padding-left: 6px;
+  padding-right: 6px;
+  transition: box-shadow 1s cubic-bezier(.23, 1, .32, 1), border .6s cubic-bezier(.165, .84, .44, 1);
+  display: flex;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
+  color: #f2f2f2;
+  padding: 0 10px 0 10px;
+  pointer-events: auto;
+}
+
+.nav-pill:hover {
+  background-color: rgba(242, 242, 242, .08);
+  border-color: rgba(242, 242, 242, .2);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .3);
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0), rgba(242, 242, 242, .05));
+}
+.nav-pill-content{
+  font-size: 85%;
+  --tw-text-opacity:1;
+  color:rgb(212 212 212/var(--tw-text-opacity));
+  font-weight: 500;
+  flex: 1; 
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-pill-content:hover{
+  z-index: -1;
+  background-color: rgba(242, 242, 242, .05);
+  border-radius: 18px;
+  width: 80px;
+  height: 36px;
+  text-align: center;
   color: white;
+  text-decoration: solid;
+  cursor: pointer;
+  font-weight:bold;
+}
+.divider{
+  --tw-border-opacity: 1;
+  border-color: rgb(38 38 38/var(--tw-border-opacity));
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
