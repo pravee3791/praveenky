@@ -13,7 +13,7 @@ const Home = () => {
         <div className="card">
           <div>
             <div>Testing Github workflow</div>
-            <div className="cardContent">Hi, I am Praveen</div>
+            <div className="cardContent">Hi, I am Praveen Yadav</div>
             <div className="cardContent">
               Senior Software Engineer @ Care.com.
             </div>
