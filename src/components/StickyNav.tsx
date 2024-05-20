@@ -7,7 +7,6 @@ interface NavBarProps {
   setIsCustomCursor: React.Dispatch<React.SetStateAction<boolean>>;
 }
 const NavBar: React.FC<NavBarProps> = ({ setIsCustomCursor }) => {
-  const pdfURL = "../pages/resume.pdf";
   const removePointerDecoration = () => {
     setIsCustomCursor(false);
   };
