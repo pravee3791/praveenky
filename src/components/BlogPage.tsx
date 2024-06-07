@@ -57,9 +57,7 @@ const BlogComponent: React.FC = () => {
               className={`blogBody ${
                 visibleBlogs[index] ? "visible" : "hidden"
               }`}
-            >
-              <div dangerouslySetInnerHTML={{ __html: blogContents[index] }} />
-            </div>
+            ></div>
             <div className="blog-divider"></div>
           </div>
         );
