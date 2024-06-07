@@ -1,0 +1,20 @@
+{
+  "blogPosts": [
+    {
+      "id": 1,
+      "title": "Authentication using JWT",
+      "date": "2024-05-28",
+      "displayContent": "JSON Web Tokens (JWT) operate by encoding user information into a secure token comprised of three parts: a header, a payload, and a signature. The header typically specifies the hashing algorithm used for signature creation. The payload contains the user data, such as user ID or role. This payload is then signed with a secret key known only to the server, ensuring its integrity and allowing servers to verify the authenticity of the token upon receiving it.",
+      "heading": "Authentication using JWT",
+      "filePath": "./1.md"
+    },
+    {
+      "id": 2,
+      "title": "React Hooks",
+      "date": "21 May 2024",
+      "displayContent": "In the realm of React, hooks decree, With useState and useEffect, code bends free. But heed the laws, lest complexity ensue, Cleanse thy state, and render anew. Components function in harmony, as they should, Maintaining order, where chaos once stood. Reusability and logic, hooks bring to light, Simplifying code, making it right. Yet, caution is key, in this dance so grand, For with power comes responsibility, at hand",
+      "heading": "React Hooks",
+      "filePath": "./2.md"
+    }
+  ]
+}
