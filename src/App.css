@@ -24,6 +24,7 @@ body.light-mode {
   height: 100vh;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
+ 
 }
 
 /* Card Styles */
@@ -34,7 +35,6 @@ body.light-mode {
   justify-content: center; 
   height: 100vh;
   scroll-snap-align: start;
-
 }
 
 .cardContent, .contactCard {
@@ -57,6 +57,76 @@ body.light-mode {
   margin: 10px;
 }
 
+.card-para{
+  font-size: var(--font-size-medium);
+  margin-top: 10vh;
+  color: #eb5939
+}
+.card-para:hover{
+  color: #b7ab98
+}
 .spacer {
   flex-grow: 1; /* Takes up the remaining space */
+}
+.cardContent {
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out; /* Transition for background color */
+  overflow: hidden;
+}
+
+.cardContent::before {
+  content: '';
+  position: absolute;
+  top: 100%; /* Start from bottom */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eb5939; /* Target background color */
+  transition: top 0.5s ease-in-out; /* Transition for moving upwards */
+  z-index: -1;
+}
+
+.cardContent:hover::before {
+  top: 0%; /* Move to top */
+}
+
+.background-text {
+  /* position: absolute;
+  top: 50%;
+  left: 50%; */
+ 
+  /* transform: translate(-50%, -50%); */
+  margin: 10vh;
+  font-size: var(--font-size-xlarge);
+  font-weight: bold;
+  font-family: var(--font-family-alt);
+  color: #ffffff1a;
+  z-index: 0;
+  text-align: center;
+}
+/* .background-text {
+  position: absolute;
+  top: 50%;
+  left: 15;
+  transform: translate(0, -50%);
+  writing-mode: vertical-rl;
+  font-size: var(--font-size-xlarge);
+  font-weight: bold;
+  font-family: var(--font-family-alt);
+  color: #ffffff1a;
+  z-index: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+} */
+
+.footer{
+
+}
+
+.footer{
+  font-size: var(--font-size-medium);
+  margin-top: 10vh;
+  color: #eb5939
+}
+.footer:hover{
+  color: #b7ab98
 }

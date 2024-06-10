@@ -18,7 +18,7 @@
     --transition-ease: 0.5s ease;
   
     /* Dark Theme Colors */
-    --background-color-dark: #101010;
+    --background-color-dark: #0d0d0d;
     --text-color-dark: #f2f2f2;
     --nav-pill-background-dark: rgba(242, 242, 242, 0.05);
     --nav-pill-border-dark: rgba(242, 242, 242, 0.1);
