@@ -1,228 +1,62 @@
-/* Define common properties */
-:root {
-  --font-family: "Plus Jakarta Sans", sans-serif;
-  --font-family-alt: sans-serif;
-  --font-size-xxlarge: xx-large;
-  --font-size-3-5rem: 3.5rem;
-  --font-size-medium: medium;
-  --font-size-small: 12px;
-  --font-size-2rem: 2rem;
-  --font-weight-normal: 400;
-  --font-weight-500: 500;
-  --font-weight-700: 700;
-  --font-weight-300: 300;
-  --transition-ease: 0.5s ease;
 
-  /* Define colors for dark theme */
-  --background-color-dark: #101010;
-  --text-color-dark: #f2f2f2;
-  --nav-pill-background-dark: rgba(242, 242, 242, .05);
-  --nav-pill-border-dark: rgba(242, 242, 242, .1);
-  --nav-pill-shadow-dark: rgba(0, 0, 0, .15);
 
-  /* Define colors for light theme */
-  --background-color-light: #f2f2f2;
-  --text-color-light: #101010;
-  --nav-pill-background-light: rgba(0, 0, 0, .05);
-  --nav-pill-border-light: rgba(0, 0, 0, .1);
-  --nav-pill-shadow-light: rgba(0, 0, 0, .15);
-}
-
-:root.light-mode {
-  --background-color: var(--background-color-light);
-  --text-color: var(--text-color-light);
-  --nav-pill-background: var(--nav-pill-background-light);
-  --nav-pill-border: var(--nav-pill-border-light);
-  --nav-pill-shadow: var(--nav-pill-shadow-light);
-}
-
-:root {
-  --background-color: var(--background-color-dark);
-  --text-color: var(--text-color-dark);
-  --nav-pill-background: var(--nav-pill-background-dark);
-  --nav-pill-border: var(--nav-pill-border-dark);
-  --nav-pill-shadow: var(--nav-pill-shadow-dark);
-}
-
-/* Default to dark theme */
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  transition: background-color var(--transition-ease);
-}
-
-/* Light mode */
-body.light-mode {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-a {
-  color: var(--text-color);
-  text-decoration: none;
-}
-
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
-.main>div:not(:first-of-type) {
-  margin: 2vh;
-}
-
-.main>div:first-child {
+  transition: background-color var(--transition-ease), color var(--transition-ease);
   height: 100vh;
+  overflow: hidden;
 }
 
-.main>div:not(:first-of-type) {
-  color: var(--text-color);
-  font-family: var(--font-family);
+body.light-mode {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+/* Additional Styles */
+
+
+.main-home {
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
+
+/* Card Styles */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  height: 100vh;
+  scroll-snap-align: start;
+
+}
+
+.cardContent, .contactCard {
   font-optical-sizing: auto;
   font-style: normal;
-  font-weight: var(--font-weight-500);
-  font-size: var(--font-size-xxlarge);
-  padding: 20px;
-  margin-left: 12vw;
-  margin-right: 12vw;
-}
-
-.card {
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .cardContent {
-  color: var(--text-color);
-  font-family: var(--font-family);
-  font-optical-sizing: auto;
-  font-style: normal;
   font-weight: var(--font-weight-700);
-  font-size: var(--font-size-3-5rem);
+  font-size: var(--font-size-xlarge);
 }
 
 .contactCard {
-  color: var(--text-color);
-  font-family: var(--font-family);
-  font-optical-sizing: auto;
-  font-style: normal;
   font-weight: var(--font-weight-normal);
   font-size: var(--font-size-medium);
   margin-top: 14px;
 }
 
-.contactCard>*:not(:first-child) {
+.contactCard > *:not(:first-child) {
   margin: 10px;
 }
 
-.custom-cursor {
-  width: 70px;
-  height: 70px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  border-radius: 50%;
-  pointer-events: none;
-  backdrop-filter: invert(1) grayscale(1);
-  -webkit-backdrop-filter: invert(1) grayscale(1);
-  transition: transform 0.1s ease-out;
-  transform: translate(-50%, -50%);
-  z-index: 99999;
-}
-
-.nav-pill-wrapper {
-  margin-top: 2vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  padding: 16px;
-}
-
-.nav-pill {
-  -webkit-backdrop-filter: blur(15px);
-  backdrop-filter: blur(15px);
-  background-color: var(--nav-pill-background);
-  border: 1px solid var(--nav-pill-border);
-  border-radius: 24px;
-  justify-content: center;
-  align-items: center;
-  min-width: 300px;
-  height: 48px;
-  padding: 0 10px;
-  transition: box-shadow 1s cubic-bezier(.23, 1, .32, 1), border .6s cubic-bezier(.165, .84, .44, 1);
-  display: flex;
-  position: relative;
-  box-shadow: 0 10px 25px var(--nav-pill-shadow);
-  color: var(--text-color);
-  pointer-events: auto;
-}
-
-.nav-pill:hover {
-  background-color: rgba(242, 242, 242, .08);
-  border-color: rgba(242, 242, 242, .2);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, .3);
-  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0), rgba(242, 242, 242, .05));
-}
-
-.nav-pill-content {
-  font-size: 85%;
-  --tw-text-opacity: 1;
-  color: rgb(212 212 212 / var(--tw-text-opacity));
-  font-weight: var(--font-weight-500);
-  flex: 1;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav-pill-content:hover {
-  z-index: -1;
-  background-color: rgba(242, 242, 242, .05);
-  border-radius: 18px;
-  width: 80px;
-  height: 36px;
-  text-align: center;
-  color: white;
-  text-decoration: solid;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.divider {
-  --tw-border-opacity: 1;
-  border-color: rgb(38 38 38 / var(--tw-border-opacity));
-}
-
-.background-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: var(--font-size-2rem);
-  font-weight: bold;
-  font-family: var(--font-family-alt);
-  color: rgba(255, 255, 255, 0.1);
-  z-index: 0;
-  text-align: center;
-}
-
-.footer {
-  margin-top: 10vh;
-  width: 95vw;
-  font-family: sans-serif;
-  font-size: var(--font-size-small);
-  font-weight: var(--font-weight-300);
-  line-height: 150%;
-  color: #939393;
+.spacer {
+  flex-grow: 1; /* Takes up the remaining space */
 }

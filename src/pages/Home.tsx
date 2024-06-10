@@ -3,7 +3,6 @@ import ScrollDown from "../components/ScrollDown";
 import { useState } from "react";
 import CustomCursor from "../components/CustomCursor";
 import "./../App.css";
-import "./Component.css";
 import Experiences from "../components/Experience";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
@@ -16,12 +15,11 @@ const Home = () => {
     <>
       {isCustomCursor && <CustomCursor />}
       <StickyNav setIsCustomCursor={setIsCustomCursor} />
-
-      <div className="main">
+      <div className="main-home">
         <div className="card">
-          <div className="background-text" id="backgroundText">
+          {/* <div className="background-text" id="backgroundText">
             {quoteText}
-          </div>
+          </div> */}
           <div>
             <div className="cardContent">Hi, I am Praveen Yadav</div>
             <div className="cardContent">
@@ -33,15 +31,16 @@ const Home = () => {
               <span>(+49) 155 10263803</span>
             </div>
           </div>
+          {/* <div className="spacer"></div> */}
           <ScrollDown></ScrollDown>
         </div>
-        <div className="card">
+        <div className="card background-card2">
           <Experiences></Experiences>
         </div>
-        <div className="card">
+        <div className="card background-card3">
           <Projects></Projects>
+          <Footer></Footer>
         </div>
-        <Footer></Footer>
       </div>
     </>
   );

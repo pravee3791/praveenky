@@ -1,0 +1,136 @@
+.blogPage {
+  margin-left: 25vh;
+  margin-right: 25vh;
+  margin-top: 5vh;
+  min-height: 100vh;
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.blogInfo {
+  color: rgba(242, 242, 242, .4);
+  font-family: var(--font-family);
+  font-size: var(--font-size-2rem);
+  font-weight: var(--font-weight-normal);
+  line-height: 125%;
+}
+
+.blogHeader {
+  letter-spacing: .1px;
+  flex: 0 auto;
+  padding-right: 24px;
+  font-family: var(--font-family);
+  font-size: var(--font-size-xxlarge);
+  font-weight: var(--font-weight-500);
+  line-height: 125%;
+  color: var(--text-color-dark);
+  margin-top: 8px;
+  margin-bottom: 9px;
+}
+
+.blogSnap {
+  color: rgba(242, 242, 242, .6);
+  letter-spacing: .4px;
+  flex: 1;
+  font-family: var(--font-family);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-300);
+  line-height: 150%;
+}
+
+.blogBody {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s ease-out;
+  color: rgba(242, 242, 242, .6);
+  letter-spacing: .4px;
+  flex: 1 1;
+  font-family: var(--font-family);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-300);
+  line-height: 150%;
+  overflow-y: scroll;
+}
+
+.blogBody.visible {
+  max-height: 100vh;
+}
+
+.blogSnap.hidden {
+  max-height: 0;
+}
+
+.blog-divider {
+  margin: 4vh;
+  width: 60%;
+  height: 1px;
+  background-color: #848484;
+}
+
+
+
+
+.container {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  margin-top: 35vh;
+}
+
+
+
+.text {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Navigation Pill */
+
+
+/* Divider */
+.divider {
+  border-color: rgba(38, 38, 38, 1);
+}
+
+/* Background Text */
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--font-size-xlarge);
+  font-weight: bold;
+  font-family: var(--font-family-alt);
+   color: rgba(0, 0, 0, 0.7);;
+  z-index: 0;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  margin-top: 10vh;
+  width: 95vw;
+  font-family: var(--font-family);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-300);
+  text-align: center;
+  padding: 10px;
+  color: var(--text-color);
+}

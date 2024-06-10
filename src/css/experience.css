@@ -1,0 +1,193 @@
+.experience{
+    margin: 10vh;
+}
+.experience-head {
+    display: flex;
+    width: 50vh;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 10px;
+  }
+ 
+
+  .experience-dot {
+    background-color: var(--text-color-dark);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 20px #fff;
+    color: var(--text-color);
+  }
+  
+  body.light-mode   .experience-dot {
+    background-color: var(--text-color-light);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    box-shadow: 0 0 20px #fff;
+    color: var(--text-color-light);
+}
+
+  .experience-overline {
+    color: rgba(242, 242, 242, .4);
+    text-align: left;
+    letter-spacing: 1.5px;
+    margin-top: 1px;
+    font-family: var(--font-family-alt);
+    font-size: 11px;
+    font-weight: var(--font-weight-500);
+    line-height: 19px;
+  }
+ 
+  body.light-mode   .experience-overline {
+    color: var(--text-color-light);
+    text-align: left;
+    letter-spacing: 1.5px;
+    margin-top: 1px;
+    font-family: var(--font-family-alt);
+    font-size: 11px;
+    font-weight: var(--font-weight-500);
+    line-height: 19px;
+}
+  .exprience-bod {
+    margin-top: 5vh;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 10vw;
+  }
+  
+  .grid-item {
+    font-size: 40px;
+  }
+  
+  .experience-heading {
+    letter-spacing: -.1px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, .2), 0 -6px 15px rgba(255, 90, 0, .1), 0 5px 15px rgba(0, 87, 255, .25);
+    font-family: var(--font-family-alt);
+    font-size: 40px;
+    font-weight: var(--font-weight-500);
+    line-height: 125%;
+  }
+  
+  .experience-heading.info-experience {
+    font-family: var(--font-family-alt);
+    font-weight: var(--font-weight-500);
+  }
+  
+  .experience-block {
+    grid-row-gap: 20px;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .experience-subheading {
+    letter-spacing: .1px;
+    flex: 0 auto;
+    padding-right: 24px;
+    font-family: var(--font-family-alt);
+    font-size: var(--font-size-2rem);
+    font-weight: var(--font-weight-500);
+    line-height: 125%;
+  }
+  
+  .experience-subheading.info {
+    font-family: var(--font-family-alt);
+  }
+  
+  .experience-body {
+    color: rgba(242, 242, 242, .6);
+    letter-spacing: .4px;
+    flex: 1;
+    font-family: var(--font-family-alt);
+    font-size: 16px;
+    font-weight: var(--font-weight-300);
+    line-height: 150%;
+  }
+  
+
+  .experience-body.info {
+    letter-spacing: .4px;
+  }
+  
+  .text-info-meta {
+    color: rgba(242, 242, 242, .4);
+    font-family: var(--font-family-alt);
+    font-size: 16px;
+    font-weight: var(--font-weight-normal);
+    line-height: 125%;
+  }
+  body.light-mode   .text-info-meta {
+    color: var(--text-color-light);
+    font-family: var(--font-family-alt);
+    font-size: 16px;
+    font-weight: var(--font-weight-normal);
+    line-height: 125%;
+} 
+.experience-card {
+  position: relative;
+  border-radius: 24px;
+  padding: 16px;
+  outline: 1px solid rgba(242, 242, 242, 0.15);
+  margin-top: 2vh;
+  overflow: hidden; /* Ensure the pseudo-element does not overflow */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.experience-card:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: #eb5939;
+  transition: height 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.experience-card:hover:before {
+  height: 100%;
+}
+
+.experience-card:hover {
+  background-color: transparent; /* Ensure background color remains transparent */
+}
+
+body.light-mode .experience-card {
+  border-radius: 24px;
+  padding: 16px;
+  outline: 1px solid hwb(0 5% 95% / 0.97);
+}
+
+.experience-card-description {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(-20px);
+}
+
+.experience-card-description.active {
+  max-height: 1000px; /* Arbitrary large value to ensure it can expand fully */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body.light-mode .experience-card-description {
+  margin-top: 2vh;
+  color: var(--text-color-light);
+  letter-spacing: .4px;
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: var(--font-weight-300);
+  line-height: 150%; 
+}
+
+.experience-bod {
+  margin-top: 16px;
+}

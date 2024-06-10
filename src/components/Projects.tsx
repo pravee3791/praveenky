@@ -3,7 +3,7 @@ import NorthEastIcon from "@mui/icons-material/NorthEast";
 const Projects = () => {
   return (
     <>
-      <div className="experince-main">
+      <div className="experience">
         <div className="experience-head">
           <div className="experience-dot"></div>
           <div className="experience-overline">PROJECTS</div>
@@ -13,7 +13,7 @@ const Projects = () => {
             <div className="project-card-title">
               WirTwo
               <Icon>
-                <NorthEastIcon style={{ color: "white" }} fontSize={"medium"} />
+                <NorthEastIcon fontSize={"medium"} />
               </Icon>
             </div>
             <div className="project-card-description">
@@ -30,7 +30,7 @@ const Projects = () => {
             <div className="project-card-title">
               Simple Calculator
               <Icon>
-                <NorthEastIcon style={{ color: "white" }} fontSize={"medium"} />
+                <NorthEastIcon fontSize={"medium"} />
               </Icon>
             </div>
             <div className="project-card-description">

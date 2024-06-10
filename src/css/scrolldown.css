@@ -1,12 +1,4 @@
-  
-  .container {
-    position: relative;
-    width: 24px;
-    height: 24px;
-    margin-top: 35vh;
-  }
-  
-  .chevron {
+.chevron {
     position: absolute;
     width: 28px;
     height: 8px;
@@ -62,22 +54,11 @@
       transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
     }
   }
-  
-  .text {
-    display: block;
-    margin-top: 75px;
-    margin-left: -30px;
-    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-    font-size: 12px;
-    color: #fff;
-    text-transform: uppercase;
-    white-space: nowrap;
-    opacity: .25;
-    animation: pulse 2s linear alternate infinite;
+
+  .scroll-down{
+    animation: move 3s ease-out 1s infinite;
   }
-  
-  @keyframes pulse {
-    to {
-      opacity: 1;
-    }
+  .svg-scroll-down {
+    transform: scale(1.8);
+    
   }

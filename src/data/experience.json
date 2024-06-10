@@ -1,0 +1,53 @@
+[
+  {
+    "company": "Care.com",
+    "role": "Senior Software Engineer",
+    "date": "Aug 2022 - Present",
+    "description": [
+      "Spearheading the development of a robust safety module front-end to proactively mitigate fraudulent activities on the platform, demonstrating a commitment to safeguarding user trust and maintaining the platform's integrity.",
+      "Collaborating with cross-functional teams to optimize and enhance various micro front-ends, thereby ensuring seamless product support and delivering exceptional user experiences."
+    ]
+  },
+  {
+    "company": "Deloitte",
+    "role": "Senior Consultant, Full Stack",
+    "date": "Mar 2020 - Jul 2022",
+    "description": [
+      "Write modern, performant, and robust code for a diverse array of client and internal projects",
+      "Work with a variety of different languages and frameworks such as JavaScript, TypeScript, React, Node.js, NestJs etc.",
+      "Communicate and collaborate with multi-disciplinary teams of engineers, managers, clients, and stakeholders on a daily basis",
+      "Created Dashboard application which tracks, gathers, and displays business data in interactive and customizable visualizations. The application is used by executives to monitor and analyze the customer service experience.",
+      "Developed, Tested and deployed dashboard application that displays the sales, pricing and prediction data in real time. Optimized and scaled the application to handle the big data.",
+      "Created a chat-bot UI for the internal website that dynamically serves response for the users."
+    ]
+  },
+  {
+    "company": "Tata Consultancy Services",
+    "role": "Assistant Manager",
+    "date": "Nov 2016 - Feb 2020",
+    "description": [
+      "Developed and deployed the application which digitalized the Changi Airport workplace.",
+      "Created a web-based content management system that is used to create Online courses for the employees of the firm. Implemented the business logic, modules and cross-browser compatibility using React.",
+      "Developed, tested and deployed cross-platform Online learning mobile application InterviewReady that helps students prepare for exams.",
+      "Collaborated with Product Designers, Product Managers, and Software Engineers to deliver compelling user-facing products."
+    ]
+  },
+  {
+    "company": "Gateway TechnoLabs Pvt. Ltd",
+    "role": "Senior Software Engineer",
+    "date": "Apr 2015 - Nov 2016",
+    "description": [
+      "Developed a Survey Software that captures and transforms paper-based system into smart digital checklists. Created web-based application using Angular and mobile application using PhongeGap.",
+      "Developed custom modules for the application and Cordova plugins for the mobile application."
+    ]
+  },
+  {
+    "company": "Brillio",
+    "role": "Engineer",
+    "date": "Jun 2013 - Mar 2015",
+    "description": [
+      "Developed a sales mobile application that helps salesman and executives with their invoices and lead generation",
+      "Developed and designed the UI using Sencha Touch, DOJO. Created Mobile Application using PhoneGap."
+    ]
+  }
+]

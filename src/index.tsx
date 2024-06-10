@@ -1,6 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import "./css/stickynav.css";
+import "./css/root.css";
+import "./css/cursor.css";
+import "./css/scrolldown.css";
+import "./css/project.css";
+import "./css/experience.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";

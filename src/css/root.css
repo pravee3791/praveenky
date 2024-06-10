@@ -1,0 +1,40 @@
+:root {
+    /* Font Families */
+    --font-family-alt: sans-serif;
+  
+    /* Font Sizes */
+    --font-size-small: 0.5rem;
+    --font-size-medium: 1rem;
+    --font-size-large: 2rem;
+    --font-size-xlarge: 3rem;
+  
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+    --font-weight-300: 300;
+  
+    /* Transition */
+    --transition-ease: 0.5s ease;
+  
+    /* Dark Theme Colors */
+    --background-color-dark: #101010;
+    --text-color-dark: #f2f2f2;
+    --nav-pill-background-dark: rgba(242, 242, 242, 0.05);
+    --nav-pill-border-dark: rgba(242, 242, 242, 0.1);
+    --nav-pill-shadow-dark: rgba(0, 0, 0, 0.15);
+  
+    /* Light Theme Colors */
+    --background-color-light: #f2f2f2;
+    --text-color-light: #101010;
+    --nav-pill-background-light: rgba(0, 0, 0, 0.05);
+    --nav-pill-border-light: rgba(0, 0, 0, 0.1);
+    --nav-pill-shadow-light: rgba(0, 0, 0, 0.15);
+  
+    /* Default Colors */
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+    --nav-pill-background: var(--nav-pill-background-dark);
+    --nav-pill-border: var(--nav-pill-border-dark);
+    --nav-pill-shadow: var(--nav-pill-shadow-dark);
+  }
