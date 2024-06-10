@@ -6,9 +6,12 @@ import "./../App.css";
 import Experiences from "../components/Experience";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
+import { setTimeout } from "timers/promises";
 
 const Home = () => {
   // const quoteText = ` * { box-sizing: border-box; }`;
+  const [showTechStack, setShowTechStack] = useState(false);
+
   const quoteText =
     "Coding: where logic paints with creativity, and bugs add unexpected twists to the masterpiece.";
   const [isCustomCursor, setIsCustomCursor] = useState(true);
@@ -22,7 +25,15 @@ const Home = () => {
           {/* <div className="background-text" id="backgroundText">
             {quoteText}
           </div> */}
-          <div className="card-hover">
+          <div
+            className="card-hover"
+            onMouseEnter={() => {
+              setShowTechStack(true);
+            }}
+            onMouseLeave={() => {
+              setShowTechStack(false);
+            }}
+          >
             <div className="cardContent superLargeText ">
               Hi, I am Praveen Yadav{" "}
             </div>
@@ -35,6 +46,7 @@ const Home = () => {
               <span>|</span>
               <span>(+49) 155 10263803</span>
             </div>
+
             <div className="card-para typewriter">
               Welcome to my small part of Internet. Here you will find my work
               experience, my personal projects, and my thought reflection in
@@ -45,6 +57,19 @@ const Home = () => {
               <br />
               JAVA and JS are my chosen tools.
             </div>
+
+            {/* {showTechStack && (
+              <div className="card-techStack ">
+                I craft softwares with passion and love.I believe coding is a
+                perfect combination of arts and science.
+                <br />
+                In the world full of AI chatbots , I feel human hand made
+                softwares are still the best. I love product and design and
+                cherish the feeling of bringing them to life.
+                <br />
+                Say hi! on linkedIn if you want to have a chat.
+              </div>
+            )} */}
           </div>
           {/* <div className="spacer"></div> */}
 

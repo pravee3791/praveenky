@@ -58,7 +58,7 @@ body.light-mode {
 }
 
 .card-para{
-  font-size: var(--font-size-medium);
+  font-size: 1.2rem;
   margin-top: 10vh;
   color: #eb5939
 }
@@ -132,5 +132,12 @@ body.light-mode {
 }
 .superLargeText{
   font-size: var(--font-size-superlarge);
+  background: linear-gradient(to left, #eb5939, blue 50%) right;
+  color: whitesmoke;   
 }
 
+.card-techStack{
+  font-size: var(--font-size-medium);
+  margin-top: 10vh;
+
+}
