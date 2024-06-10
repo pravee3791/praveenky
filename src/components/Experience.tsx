@@ -22,10 +22,14 @@ function Experience() {
             <div className="experience-card" key={experience.company}>
               <div className="experience-card-title">
                 <div className="experience-heading info-experience">
-                  {experience.company}{" "}
-                  <Icon onClick={() => handleToggle(index)}>
+                  {experience.year} | {experience.company}{" "}
+                  <Icon
+                    onClick={() => handleToggle(index)}
+                    onMouseEnter={() => handleToggle(index)}
+                  >
                     <NorthEastIcon fontSize={"medium"} />
                   </Icon>
+                  <span className="experience-tech">{experience.tech}</span>
                 </div>
               </div>
               <div

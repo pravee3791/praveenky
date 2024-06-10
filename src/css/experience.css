@@ -191,3 +191,15 @@ body.light-mode .experience-card-description {
 .experience-bod {
   margin-top: 16px;
 }
+
+.experience-tech{
+  color: #b7ab98;
+  font-size: medium;
+  float:right 
+}
+
+body.light-mode .experience-tech{
+  color: var(--text-color-light);
+  font-size: medium;
+  float:right 
+}
