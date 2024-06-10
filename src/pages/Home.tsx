@@ -1,6 +1,6 @@
 import StickyNav from "../components/StickyNav";
 import ScrollDown from "../components/ScrollDown";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CustomCursor from "../components/CustomCursor";
 import "./../App.css";
 import Experiences from "../components/Experience";
@@ -11,11 +11,25 @@ import { setTimeout } from "timers/promises";
 const Home = () => {
   // const quoteText = ` * { box-sizing: border-box; }`;
   const [showTechStack, setShowTechStack] = useState(false);
-
+  const targetDivRef = useRef<HTMLDivElement>(null);
   const quoteText =
     "Coding: where logic paints with creativity, and bugs add unexpected twists to the masterpiece.";
   const [isCustomCursor, setIsCustomCursor] = useState(true);
+  useEffect(() => {
+    // Ensure the element is available before triggering the event
+    if (targetDivRef.current) {
+      // Create a new MouseEvent
+      const mouseOverEvent = new MouseEvent("mouseover", {
+        bubbles: true,
+        cancelable: true,
+        view: window,
+      });
 
+      // Dispatch the event on the target element
+
+      targetDivRef.current.dispatchEvent(mouseOverEvent);
+    }
+  }, []);
   return (
     <>
       {isCustomCursor && <CustomCursor />}
@@ -26,6 +40,7 @@ const Home = () => {
             {quoteText}
           </div> */}
           <div
+            ref={targetDivRef}
             className="card-hover"
             onMouseEnter={() => {
               setShowTechStack(true);

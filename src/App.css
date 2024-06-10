@@ -1,12 +1,23 @@
-
-
 body {
-  background-color: var(--background-color);
+  --text-color: #ffffff;
+  background-color: #0d0d0d; /* Final background color */
   color: var(--text-color);
-  transition: background-color var(--transition-ease), color var(--transition-ease);
   height: 100vh;
   overflow: hidden;
+  position: relative;
 }
+
+
+
+@keyframes backgroundTransition {
+  0% {
+    background-color: #eb5939; /* Initial background color */
+  }
+  100% {
+    background-color: #0d0d0d; /* Final background color */
+  }
+}
+
 
 body.light-mode {
   background-color: var(--background-color-light);
@@ -146,4 +157,6 @@ body.light-mode {
   font-size: var(--font-size-medium);
   margin-top: 10vh;
 }
-
+.card-hover{
+  animation:  slideInFromLeft 2s; 
+}
