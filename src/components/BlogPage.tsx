@@ -34,7 +34,7 @@ const BlogComponent: React.FC = () => {
       <div className="experience">
         <div className="experience-head">
           <div className="experience-dot"></div>
-          <div className="experience-overline">PROJECTS</div>
+          <div className="experience-overline">BLOGS</div>
         </div>
         {data.blogPosts.map((item, index) => (
           <div key={index} className="project-bod">
