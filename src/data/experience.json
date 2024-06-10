@@ -23,7 +23,7 @@
       "Developed, Tested and deployed dashboard application that displays the sales, pricing and prediction data in real time. Optimized and scaled the application to handle the big data.",
       "Created a chat-bot UI for the internal website that dynamically serves response for the users."
     ],
-    "tech": "React , NodeJS, NestJS"
+    "tech": "React , NodeJS, NestJS ,SQL"
   },
   {
     "company": "Tata Consultancy Services",
@@ -36,7 +36,7 @@
       "Developed, tested and deployed cross-platform Online learning mobile application InterviewReady that helps students prepare for exams.",
       "Collaborated with Product Designers, Product Managers, and Software Engineers to deliver compelling user-facing products."
     ],
-    "tech": "React , Redux, NestJS"
+    "tech": "React , Redux, NestJS, .NET"
   },
   {
     "company": "Gateway TechnoLabs Pvt. Ltd",
@@ -58,6 +58,6 @@
       "Developed a sales mobile application that helps salesman and executives with their invoices and lead generation",
       "Developed and designed the UI using Sencha Touch, DOJO. Created Mobile Application using PhoneGap."
     ],
-    "tech": "Cordova, JavaScript, Sencha, DOJO"
+    "tech": "Cordova, JavaScript, Sencha"
   }
 ]

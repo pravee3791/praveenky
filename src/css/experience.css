@@ -195,11 +195,13 @@ body.light-mode .experience-card-description {
 .experience-tech{
   color: #b7ab98;
   font-size: medium;
-  float:right 
+  float:right;
+  direction: rtl;
 }
 
 body.light-mode .experience-tech{
   color: var(--text-color-light);
   font-size: medium;
-  float:right 
+  float:right ;
+  direction: rtl;
 }
