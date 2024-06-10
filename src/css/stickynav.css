@@ -38,7 +38,7 @@
 .nav-pill-multicolor {
     backdrop-filter: blur(15px);
     background: linear-gradient(to left, #eb5939, blue 99%) right;
-    color: whitesmoke;
+    color: whitesmoke !important;
     border-radius: 24px;
     display: flex;
     align-items: center;
@@ -81,6 +81,12 @@
 
 body.light-mode a {
     color: var(--text-color-light);
+    text-decoration: none;
+}
+
+body.light-mode .nav-pill-multicolor a,
+body.light-mode .nav-pill-multicolor a * {
+    color: whitesmoke;
     text-decoration: none;
 }
 

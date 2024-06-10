@@ -6,7 +6,8 @@ const Blogs = () => {
   const [isCustomCursor, setIsCustomCursor] = useState(true);
   return (
     <>
-      <StickyNav showMultiColor={false} setIsCustomCursor={setIsCustomCursor} />
+      {/* {isCustomCursor && <CustomCursor />} */}
+      <StickyNav showMultiColor={true} setIsCustomCursor={setIsCustomCursor} />
       <BlogComponent></BlogComponent>
     </>
   );
