@@ -23,7 +23,9 @@ const Home = () => {
             {quoteText}
           </div> */}
           <div className="card-hover">
-            <div className="cardContent">Hi, I am Praveen Yadav </div>
+            <div className="cardContent superLargeText ">
+              Hi, I am Praveen Yadav{" "}
+            </div>
             <div className="cardContent">
               Senior Software Engineer @ Care.com.
             </div>
@@ -33,7 +35,7 @@ const Home = () => {
               <span>|</span>
               <span>(+49) 155 10263803</span>
             </div>
-            <div className="card-para">
+            <div className="card-para typewriter">
               Welcome to my small part of Internet. Here you will find my work
               experience, my personal projects, and my thought reflection in
               blogs.
