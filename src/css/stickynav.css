@@ -35,6 +35,22 @@
     color: var(--text-color);
 }
 
+.nav-pill-multicolor {
+    backdrop-filter: blur(15px);
+    background: linear-gradient(to left, #eb5939, blue 99%) right;
+    color: whitesmoke;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+    height: 48px;
+    padding: 0 10px;
+    transition: box-shadow 1s cubic-bezier(0.23, 1, 0.32, 1), border 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 25px var(--nav-pill-shadow);
+   
+}
+
 .nav-pill:hover {
     background-color: rgba(242, 242, 242, 0.08);
     border-color: rgba(242, 242, 242, 0.2);
@@ -67,6 +83,7 @@ body.light-mode a {
     color: var(--text-color-light);
     text-decoration: none;
 }
+
 body a {
     color: var(--text-color-dark);
     text-decoration: none;

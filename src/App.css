@@ -1,6 +1,6 @@
 body {
   --text-color: #ffffff;
-  background-color: #0d0d0d; /* Final background color */
+  background-color: #0d0d0d;
   color: var(--text-color);
   height: 100vh;
   overflow: hidden;
@@ -11,10 +11,11 @@ body {
 
 @keyframes backgroundTransition {
   0% {
-    background-color: #eb5939; /* Initial background color */
+    background-color: #eb5939;
   }
+
   100% {
-    background-color: #0d0d0d; /* Final background color */
+    background-color: #0d0d0d;
   }
 }
 
@@ -27,28 +28,24 @@ body.light-mode {
 }
 
 
-/* Additional Styles */
-
-
 .main-home {
   overflow: scroll;
   height: 100vh;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
- 
 }
 
-/* Card Styles */
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   height: 100vh;
   scroll-snap-align: start;
 }
 
-.cardContent, .contactCard {
+.cardContent,
+.contactCard {
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -64,99 +61,77 @@ body.light-mode {
   margin-top: 14px;
 }
 
-.contactCard > *:not(:first-child) {
+.contactCard>*:not(:first-child) {
   margin: 10px;
 }
 
-.card-para{
+.card-para {
   font-size: 1.2rem;
   margin-top: 10vh;
   color: #eb5939
 }
-.card-para:hover{
+
+.card-para:hover {
   color: #b7ab98
 }
-.spacer {
-  flex-grow: 1; /* Takes up the remaining space */
-}
+
+
 .cardContent {
   cursor: pointer;
-  transition: background-color 0.5s ease-in-out; /* Transition for background color */
+  transition: background-color 0.5s ease-in-out;
   overflow: hidden;
 }
 
 .cardContent::before {
   content: '';
   position: absolute;
-  top: 100%; /* Start from bottom */
+  top: 100%;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #eb5939; /* Target background color */
-  transition: top 0.5s ease-in-out; /* Transition for moving upwards */
+  background-color: #eb5939;
+  transition: top 0.5s ease-in-out;
   z-index: -1;
 }
 
 .cardContent:hover::before {
-  top: 0%; /* Move to top */
+  top: 0%;
 }
 
-.background-text {
-  /* position: absolute;
-  top: 50%;
-  left: 50%; */
- 
-  /* transform: translate(-50%, -50%); */
-  margin: 10vh;
-  font-size: var(--font-size-xlarge);
-  font-weight: bold;
-  font-family: var(--font-family-alt);
-  color: #ffffff1a;
-  z-index: 0;
-  text-align: center;
-}
-/* .background-text {
-  position: absolute;
-  top: 50%;
-  left: 15;
-  transform: translate(0, -50%);
-  writing-mode: vertical-rl;
-  font-size: var(--font-size-xlarge);
-  font-weight: bold;
-  font-family: var(--font-family-alt);
-  color: #ffffff1a;
-  z-index: 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
-} */
 
-.footer{
-
-}
-
-.footer{
+.footer {
   font-size: var(--font-size-medium);
   margin-top: 10vh;
   color: #eb5939
 }
-.footer:hover{
+
+.footer:hover {
   color: #b7ab98
 }
+
 @keyframes slideInFromLeft {
- from {opacity: 0}
- to {opacity: 1;}
-}
-.superLargeText{
-  font-size: var(--font-size-superlarge);
-  background: linear-gradient(to left, #eb5939, blue 99%) right;
-  color: whitesmoke;   
-  animation:  slideInFromLeft 2s;
-  /* transition: .5s ease-out; */
+  from {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-.card-techStack{
+.superLargeText {
+  font-size: var(--font-size-superlarge);
+  background: linear-gradient(to left, #eb5939, blue 99%) right;
+  color: whitesmoke;
+  animation: slideInFromLeft 2s;
+}
+
+.card-techStack {
   font-size: var(--font-size-medium);
   margin-top: 10vh;
 }
-.card-hover{
-  animation:  slideInFromLeft 2s; 
+
+.card-hover {
+  animation: slideInFromLeft 2s;
 }
+

@@ -6,41 +6,28 @@ import "./../App.css";
 import Experiences from "../components/Experience";
 import Projects from "../components/Projects";
 import Footer from "../components/Footer";
-import { setTimeout } from "timers/promises";
+import { useInView } from "react-intersection-observer";
 
 const Home = () => {
   // const quoteText = ` * { box-sizing: border-box; }`;
   const [showTechStack, setShowTechStack] = useState(false);
   const targetDivRef = useRef<HTMLDivElement>(null);
-  const quoteText =
-    "Coding: where logic paints with creativity, and bugs add unexpected twists to the masterpiece.";
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+
   const [isCustomCursor, setIsCustomCursor] = useState(true);
-  useEffect(() => {
-    // Ensure the element is available before triggering the event
-    if (targetDivRef.current) {
-      // Create a new MouseEvent
-      const mouseOverEvent = new MouseEvent("mouseover", {
-        bubbles: true,
-        cancelable: true,
-        view: window,
-      });
-
-      // Dispatch the event on the target element
-
-      targetDivRef.current.dispatchEvent(mouseOverEvent);
-    }
-  }, []);
   return (
     <>
       {isCustomCursor && <CustomCursor />}
-      <StickyNav setIsCustomCursor={setIsCustomCursor} />
+      <StickyNav
+        setIsCustomCursor={setIsCustomCursor}
+        showMultiColor={inView}
+      />
       <div className="main-home">
         <div className="card">
-          {/* <div className="background-text" id="backgroundText">
-            {quoteText}
-          </div> */}
           <div
-            ref={targetDivRef}
             className="card-hover"
             onMouseEnter={() => {
               setShowTechStack(true);
@@ -49,7 +36,7 @@ const Home = () => {
               setShowTechStack(false);
             }}
           >
-            <div className="cardContent superLargeText ">
+            <div className="cardContent superLargeText " ref={targetDivRef}>
               Hi, I am Praveen Yadav{" "}
             </div>
             <div className="cardContent">
@@ -90,7 +77,7 @@ const Home = () => {
 
           <ScrollDown></ScrollDown>
         </div>
-        <div className="card background-card2">
+        <div className="card background-card2" ref={ref}>
           <Experiences></Experiences>
         </div>
         <div className="card background-card3">

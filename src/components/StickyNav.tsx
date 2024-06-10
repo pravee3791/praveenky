@@ -8,8 +8,12 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 interface NavBarProps {
   setIsCustomCursor: React.Dispatch<React.SetStateAction<boolean>>;
+  showMultiColor: Boolean;
 }
-const NavBar: React.FC<NavBarProps> = ({ setIsCustomCursor }) => {
+const NavBar: React.FC<NavBarProps> = ({
+  setIsCustomCursor,
+  showMultiColor,
+}) => {
   const [isLightMode, setIsLightMode] = useState(false);
   useEffect(() => {
     if (isLightMode) {
@@ -32,7 +36,8 @@ const NavBar: React.FC<NavBarProps> = ({ setIsCustomCursor }) => {
       <div className="nav">
         <div className="nav-pill-wrapper">
           <div
-            className="nav-pill"
+            // className="nav-pill"
+            className={showMultiColor ? `nav-pill-multicolor` : `nav-pill`}
             onMouseEnter={removePointerDecoration}
             onMouseLeave={addPointerDecoration}
           >
