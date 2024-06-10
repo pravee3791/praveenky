@@ -130,9 +130,9 @@
 } 
 .experience-card {
   position: relative;
-  border-radius: 24px;
+  /* border-radius: 24px; */
   padding: 16px;
-  outline: 1px solid rgba(242, 242, 242, 0.15);
+  border-bottom: 1px solid rgba(242, 242, 242, 0.15);
   margin-top: 2vh;
   overflow: hidden; /* Ensure the pseudo-element does not overflow */
   transition: background-color 0.3s ease-in-out;
@@ -159,9 +159,9 @@
 }
 
 body.light-mode .experience-card {
-  border-radius: 24px;
+  /* border-radius: 24px; */
   padding: 16px;
-  outline: 1px solid hwb(0 5% 95% / 0.97);
+  border-bottom: 1px solid hwb(0 5% 95% / 0.97);
 }
 
 .experience-card-description {
