@@ -136,7 +136,7 @@ body.light-mode {
 }
 .superLargeText{
   font-size: var(--font-size-superlarge);
-  background: linear-gradient(to left, #eb5939, blue 50%) right;
+  background: linear-gradient(to left, #eb5939, blue 99%) right;
   color: whitesmoke;   
   animation:  slideInFromLeft 2s;
   /* transition: .5s ease-out; */
